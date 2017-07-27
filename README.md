@@ -1,0 +1,5 @@
+# PendingIntent
+
+A pending intent is a wrapper around an intent object. You first create an intent that gives your own application some instruction to start an activity or a service, or to send a broadcast.
+You wrap it in a pending intent and send it to another wrap, sometimes called the foreign app. That app can then save the pending intent and when it's ready it can send it back to your own application. Your app can then execute the original intent's instructions. If the requested action needs a particular permission, you can declare that permission in your app's manifest. The foreign app doesn't need the permission and it doesn't even need to know specifically what's going to happen. In this example, I'll start by creating another broadcast receiver.
+So the pending intent is an effective way to send a message off to a foreign application and then, whenever the foreign application is done with it, it'll send it back to your app and it's up to your app to interpret that intent and take whatever action is needed.
